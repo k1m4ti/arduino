@@ -1,0 +1,10 @@
+﻿Nazwa,Ilość,Komponent
+"U2",1," Arduino Uno R3"
+"D1",1,"Czerwony Dioda LED"
+"D2",1,"Żółty Dioda LED"
+"D3",1,"Zielony Dioda LED"
+"R1",1,"180 Ω Rezystor"
+"R2",1,"220 Ω Rezystor"
+"R3",1,"200 Ω Rezystor"
+"S1, S2, S3",3," Przełącznik suwakowy"
+"U1",1," Czujnik temperatury [TMP36]"
