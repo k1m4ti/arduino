@@ -1,0 +1,21 @@
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#include <util/delay.h>
+
+int main (void) 
+{
+    DDRB |= (PB1<<1); //ustawiamy pinb1 jako wyjście
+	/*ustawiamy tryb pwm na fast pwm bez preskalera*/
+    TCCR1A |= (1<<WGM10) | (1<<COM1A1);
+    TCCR1B |= (1<<WGM12) | (1<<CS10);
+    
+  uint8_t pwm;
+	/*pętla zmieniająca jasność diody na wyjściu*/
+    while(1){
+        for(pwm=0;pwm<256;pwm++) OCR1A = pwm;;
+        _delay_ms(100);
+      	for(pwm=256;pwm>0;pwm--) OCR1A = pwm;;
+      	_delay_ms(100);
+    }
+    
+}
